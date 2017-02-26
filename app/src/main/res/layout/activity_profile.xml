@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hungryhackers.bvpal.ProfileActivity"
+    android:background="@color/bodyBG">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:id="@+id/events_layout"
+        android:layout_above="@+id/navigationBarTabLayout"
+        android:visibility="visible"
+        android:background="@color/lightGrey">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/eventcards_list"></ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/profile_layout"
+        android:layout_above="@+id/navigationBarTabLayout"
+        android:visibility="visible"
+        android:background="@color/bodyBG">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/details_layout"
+            android:gravity="center_vertical"
+            android:layout_height="164dp"
+            android:elevation="6dp"
+            android:background="@drawable/shadow_231848"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="158dp"
+                android:alpha="10"></LinearLayout>
+
+            <ImageView
+                app:srcCompat="@drawable/maleavatar"
+                android:id="@+id/avatar"
+                android:scaleY="1"
+                android:layout_width="120dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="27dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="15dp"
+                android:onClick="avatarChange" />
+
+            <TextView
+                android:text="NAME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_marginStart="17dp"
+                android:layout_alignTop="@+id/avatar"
+                android:layout_toEndOf="@+id/avatar"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RollNumber"
+                    android:id="@+id/rollNumber"
+                    android:layout_centerVertical="true"
+                    android:layout_alignStart="@+id/name"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Branch"
+                    android:id="@+id/branch"
+                    android:layout_above="@+id/rollNumber"
+                    android:layout_alignStart="@+id/rollNumber"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester"
+                    android:id="@+id/semester"
+                    android:layout_below="@+id/rollNumber"
+                    android:layout_alignEnd="@+id/name"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:text="LOGOUT"
+                android:id="@+id/textView"
+                android:textSize="14sp"
+                android:layout_width="70dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="22dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/avatar"
+                android:onClick="logout" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/profilecards_layout"
+            android:layout_below="@+id/details_layout"
+            android:layout_marginTop="-35px">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/prfilecards_list"
+                android:layout_margin="0dp"
+                android:background="@color/lightGrey" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar2"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/timetable_layout"
+        android:layout_above="@+id/navigationBarTabLayout"
+        android:background="@color/bodyBG"
+        android:visibility="gone">
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/spinnerLayout"
+        android:layout_above="@id/navigationBarTabLayout"
+        android:background="@color/bodyBG"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:background="@color/navigationBarBG"-->
+        <!--android:id="@+id/navigationBarLayout"-->
+        <!--android:weightSum="3"-->
+        <!--android:elevation="18dp"-->
+        <!--android:visibility="invisible">-->
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_gravity="center_vertical|center_horizontal"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:onClick="eventsListener">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:srcCompat="@drawable/eventsicon"-->
+                <!--android:id="@+id/eventsListener"-->
+                <!--android:layout_weight="1"-->
+                <!--android:onClick="eventsListener" />-->
+
+            <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="15dp"-->
+                <!--android:paddingTop="0dp"-->
+                <!--android:background="@color/blueAccent"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:id="@+id/eventLine"></LinearLayout>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:onClick="profileListener">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:srcCompat="@drawable/profileicon"-->
+                <!--android:id="@+id/profileListener"-->
+                <!--android:layout_weight="1"-->
+                <!--android:onClick="profileListener" />-->
+
+            <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="15dp"-->
+                <!--android:paddingTop="0dp"-->
+                <!--android:background="@color/blueAccent"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:id="@+id/profileLine"></LinearLayout>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:onClick="timeTableListener">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:srcCompat="@drawable/timetableicon"-->
+                <!--android:id="@+id/timetableListener"-->
+                <!--android:layout_weight="1"-->
+                <!--android:onClick="timeTableListener" />-->
+
+            <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="15dp"-->
+                <!--android:paddingTop="0dp"-->
+                <!--android:background="@color/blueAccent"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:id="@+id/timetableLine"-->
+                <!--android:saveEnabled="false"></LinearLayout>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bodyBG"
+        android:layout_weight="1"
+        android:id="@+id/avatarLayout"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                app:srcCompat="@drawable/maleavatar"
+                android:id="@+id/boy"
+                android:layout_height="170dp"
+                android:onClick="boy"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:text="Guy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:id="@+id/textView3"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_centerInParent="false"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    app:srcCompat="@drawable/femaleavatar"
+                    android:id="@+id/girl"
+                    android:onClick="girl"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:text="Gal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bodyBG"
+        android:layout_alignParentBottom="true"
+        app:tabSelectedTextColor="@color/blueAccent"
+        app:tabTextColor="@color/lightGrey"
+        android:id="@+id/navigationBarTabLayout">
+
+    </android.support.design.widget.TabLayout>
+
+</RelativeLayout>

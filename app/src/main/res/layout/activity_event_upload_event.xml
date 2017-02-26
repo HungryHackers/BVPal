@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_event_upload_event"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.hungryhackers.bvpal.EventUploadEventActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="32dp">
+
+                <Button
+                    android:text="Submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/registerSubmitButton"
+                    android:layout_weight="1"
+                    android:onClick="submit"/>
+
+                <Button
+                    android:text="Cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/registerCancelButton"
+                    android:layout_weight="1"
+                    android:onClick="cancel"/>
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords|textPersonName"
+                android:hint="Event Name"
+                android:id="@+id/registerEventName" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout3"
+                android:onClick="selectDate">
+
+                <TextView
+                    android:text=" Select Date  "
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/selectDateTextView"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/registerDate"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="selectTime"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout2">
+
+                <TextView
+                    android:text=" Select start time  "
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/selectStartTextView"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/registerStartTime"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="selectTime"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout5">
+
+                <TextView
+                    android:text=" Select end time  "
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/selectEndTextView"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/registerEndTime"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:onClick="selectPoster">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".7"
+                    android:id="@+id/posterImageView"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout6"
+                    android:layout_weight=".3">
+
+                    <TextView
+                        android:text=" Select Poster "
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/selectPosterTextView"
+                        android:textSize="17sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/registerPosterName"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords|textPersonName"
+                android:id="@+id/registerVenue"
+                android:hint="Venue"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences|textMultiLine"
+                android:id="@+id/registerDesc"
+                android:hint="Decsription" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
